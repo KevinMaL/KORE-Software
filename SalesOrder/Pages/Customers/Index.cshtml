@@ -1,0 +1,27 @@
+﻿@page
+@model SalesOrder.Pages.Customers.IndexModel
+@{
+}
+
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>FullName</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.customerInfos)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.FullName</td>
+                <td>@item.EmailAddress</td>
+                <td>@item.Phone</td>
+            </tr>
+        }
+    </tbody>
+</table>
